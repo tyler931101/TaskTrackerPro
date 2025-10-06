@@ -1,0 +1,26 @@
+<Page x:Class="TicketManagementSystem.Views.ChartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:oxy="http://oxyplot.org/wpf"
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Charts">
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Filter -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,20">
+            <TextBox Text="{Binding FilterUser, UpdateSourceTrigger=PropertyChanged}"
+                     md:HintAssist.Hint="Search tickets..."
+                     Width="200" Margin="0,0,10,0"/>
+            <Button Content="Filter" Command="{Binding FilterCommand}" Width="100"/>
+        </StackPanel>
+
+        <!-- Chart -->
+        <oxy:PlotView Grid.Row="1"
+                      Model="{Binding TicketsChartModel}" />
+            <!-- We'll create a small converter below for labels -->
+    </Grid>
+</Page>

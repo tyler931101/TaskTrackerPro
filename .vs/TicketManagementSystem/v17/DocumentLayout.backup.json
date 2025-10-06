@@ -1,0 +1,851 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LayoutPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\LayoutPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LayoutPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\LayoutPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ProfilePage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\RegisterPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\LoginPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ChartPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\ChartViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\ChartViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\LoginPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\RegisterPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ProfilePage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\AdminDashboardPage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\IndexViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\IndexViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\AdminDashboardPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ChartPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\AdminDashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\AdminDashboardViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ProfilePage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\TicketManagementPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\TicketManagementPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\AdminDashboardPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\RegisterPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\TicketManagementSystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TicketManagementSystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\ChartPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\LoginPage.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\IndexPage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\IndexPage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\LayoutViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\LayoutViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\BoolToVisibilityConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\BoolToVisibilityConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\Logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\ConfigManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\ConfigManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\AppDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\PageTransitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\PageTransitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\ProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\TicketManagementViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\TicketManagementViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\NotificationManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\NotificationManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ViewModels\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\IndexPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\IndexPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\AuthenticationService.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\AuthenticationService.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\ThemeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\ThemeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\Styles.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\Styles.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\DarkTheme.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\DarkTheme.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\LightTheme.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resources\\LightTheme.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Models\\Ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\UserSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\UserSession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\TicketService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\TicketService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\TicketManagementPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\TicketManagementPage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\NavigationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\NavigationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "Views\\ProfilePage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml",
+              "RelativeToolTip": "Views\\ProfilePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T07:20:33.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ChartViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\ChartViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ChartViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\ChartViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ChartViewModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIAwwBcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:50:45.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:41:34.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\RegisterPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml.cs",
+              "RelativeToolTip": "Views\\RegisterPage.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:42:12.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ProfilePage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "Views\\ProfilePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:53:46.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminDashboardPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminDashboardPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml",
+              "RelativeToolTip": "Views\\AdminDashboardPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T06:32:42.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LayoutPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LayoutPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LayoutPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LayoutPage.xaml.cs",
+              "RelativeToolTip": "Views\\LayoutPage.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:43:10.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LayoutPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LayoutPage.xaml",
+              "RelativeDocumentMoniker": "Views\\LayoutPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LayoutPage.xaml",
+              "RelativeToolTip": "Views\\LayoutPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:42:47.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChartPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml",
+              "RelativeDocumentMoniker": "Views\\ChartPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml",
+              "RelativeToolTip": "Views\\ChartPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T06:29:03.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "Views\\LoginPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T06:58:53.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml",
+              "RelativeDocumentMoniker": "Views\\RegisterPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml",
+              "RelativeToolTip": "Views\\RegisterPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T07:13:06.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IndexViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\IndexViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\IndexViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\IndexViewModel.cs",
+              "RelativeToolTip": "ViewModels\\IndexViewModel.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:01:36.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T06:16:15.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminDashboardPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\AdminDashboardPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml.cs",
+              "RelativeToolTip": "Views\\AdminDashboardPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:07:47.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ChartPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\ChartPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml.cs",
+              "RelativeToolTip": "Views\\ChartPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:51:50.93Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminDashboardViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\AdminDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AdminDashboardViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\AdminDashboardViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AdminDashboardViewModel.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAcwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:07:36.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "Views\\ProfilePage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ProfilePage.xaml",
+              "RelativeToolTip": "Views\\ProfilePage.xaml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBgAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:44:29.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TicketManagementPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\TicketManagementPage.xaml",
+              "RelativeDocumentMoniker": "Views\\TicketManagementPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\TicketManagementPage.xaml",
+              "RelativeToolTip": "Views\\TicketManagementPage.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAIBJwDIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:43:52.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AdminDashboardPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml",
+              "RelativeDocumentMoniker": "Views\\AdminDashboardPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\AdminDashboardPage.xaml",
+              "RelativeToolTip": "Views\\AdminDashboardPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T02:07:16.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RegisterPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml",
+              "RelativeDocumentMoniker": "Views\\RegisterPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\RegisterPage.xaml",
+              "RelativeToolTip": "Views\\RegisterPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:09:01.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TicketManagementSystem.csproj",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\TicketManagementSystem.csproj",
+              "RelativeDocumentMoniker": "TicketManagementSystem.csproj",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\TicketManagementSystem.csproj",
+              "RelativeToolTip": "TicketManagementSystem.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-06T00:55:17.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T00:59:17.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ChartPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml",
+              "RelativeDocumentMoniker": "Views\\ChartPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\ChartPage.xaml",
+              "RelativeToolTip": "Views\\ChartPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:44:06.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:09:09.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IndexPage.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\IndexPage.xaml",
+              "RelativeDocumentMoniker": "Views\\IndexPage.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\IndexPage.xaml",
+              "RelativeToolTip": "Views\\IndexPage.xaml",
+              "ViewState": "AgIAAAcAAAAAAAAAAABBwBwAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T00:55:00.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:06:42.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:06:40.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LayoutViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\LayoutViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LayoutViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\LayoutViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LayoutViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA9wDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:43:25.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BoolToVisibilityConverter.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\BoolToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Core\\BoolToVisibilityConverter.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\BoolToVisibilityConverter.cs",
+              "RelativeToolTip": "Core\\BoolToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:10:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\Logger.cs",
+              "RelativeDocumentMoniker": "Core\\Logger.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\Logger.cs",
+              "RelativeToolTip": "Core\\Logger.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAwwDoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:16:44.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ConfigManager.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\ConfigManager.cs",
+              "RelativeDocumentMoniker": "Core\\ConfigManager.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\ConfigManager.cs",
+              "RelativeToolTip": "Core\\ConfigManager.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:18:42.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-06T02:20:11.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAIBXwAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:54:38.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAABRwBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:00:08.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "PageTransitions.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\PageTransitions.cs",
+              "RelativeDocumentMoniker": "Core\\PageTransitions.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\PageTransitions.cs",
+              "RelativeToolTip": "Core\\PageTransitions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:57:30.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProfileViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\ProfileViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:53:00.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TicketManagementViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\TicketManagementViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\TicketManagementViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\TicketManagementViewModel.cs",
+              "RelativeToolTip": "ViewModels\\TicketManagementViewModel.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAwwHMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:49:07.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "NotificationManager.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\NotificationManager.cs",
+              "RelativeDocumentMoniker": "Core\\NotificationManager.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\NotificationManager.cs",
+              "RelativeToolTip": "Core\\NotificationManager.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T02:01:13.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwB0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:41:50.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwB8AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:42:28.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:46:45.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IndexPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\IndexPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\IndexPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\IndexPage.xaml.cs",
+              "RelativeToolTip": "Views\\IndexPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:08:09.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthenticationService.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\AuthenticationService.cs",
+              "RelativeToolTip": "Services\\AuthenticationService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wCAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:47:00.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ThemeManager.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\ThemeManager.cs",
+              "RelativeDocumentMoniker": "Core\\ThemeManager.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\ThemeManager.cs",
+              "RelativeToolTip": "Core\\ThemeManager.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:56:47.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\Styles.xaml",
+              "RelativeDocumentMoniker": "Resources\\Styles.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\Styles.xaml",
+              "RelativeToolTip": "Resources\\Styles.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAuwEEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:05:37.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "DarkTheme.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\DarkTheme.xaml",
+              "RelativeDocumentMoniker": "Resources\\DarkTheme.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\DarkTheme.xaml",
+              "RelativeToolTip": "Resources\\DarkTheme.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:56:24.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "LightTheme.xaml",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\LightTheme.xaml",
+              "RelativeDocumentMoniker": "Resources\\LightTheme.xaml",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Resources\\LightTheme.xaml",
+              "RelativeToolTip": "Resources\\LightTheme.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-06T01:56:11.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "Models\\Ticket.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Models\\Ticket.cs",
+              "RelativeToolTip": "Models\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:48:40.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "UserSession.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\UserSession.cs",
+              "RelativeDocumentMoniker": "Core\\UserSession.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Core\\UserSession.cs",
+              "RelativeToolTip": "Core\\UserSession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:52:32.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\TicketService.cs",
+              "RelativeDocumentMoniker": "Services\\TicketService.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\TicketService.cs",
+              "RelativeToolTip": "Services\\TicketService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAwwB8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:48:53.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "TicketManagementPage.xaml.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\TicketManagementPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\TicketManagementPage.xaml.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Views\\TicketManagementPage.xaml.cs",
+              "RelativeToolTip": "Views\\TicketManagementPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T01:49:56.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "NavigationService.cs",
+              "DocumentMoniker": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\NavigationService.cs",
+              "RelativeDocumentMoniker": "Services\\NavigationService.cs",
+              "ToolTip": "E:\\work\\UK-SeanChen\\TicketManagementSystem\\Services\\NavigationService.cs",
+              "RelativeToolTip": "Services\\NavigationService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T00:59:47.887Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<Page x:Class="TicketManagementSystem.Views.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Profile">
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="350">
+            <TextBlock Text="Profile Information" FontSize="26" FontWeight="Bold"
+                       HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Role" FontWeight="SemiBold"/>
+            <TextBox Text="{Binding Role}" IsReadOnly="True" Background="#EEE"/>
+
+            <TextBlock Text="Username" FontWeight="SemiBold"/>
+            <TextBox Text="{Binding Username}" IsReadOnly="True" Background="#EEE"/>
+
+            <TextBlock Text="Full Name" FontWeight="SemiBold"/>
+            <TextBox Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Email" FontWeight="SemiBold"/>
+            <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" />
+
+            <TextBlock Text="Password" FontWeight="SemiBold"/>
+            <PasswordBox x:Name="PasswordBox" PasswordChanged="PasswordBox_PasswordChanged"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Update" Command="{Binding UpdateProfileCommand}" Width="120"/>
+                <Button Content="Logout" Command="{Binding LogoutCommand}" Width="120"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

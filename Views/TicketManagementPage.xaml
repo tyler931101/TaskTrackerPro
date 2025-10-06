@@ -1,0 +1,51 @@
+<Page x:Class="TicketManagementSystem.Views.TicketManagementPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Ticket Management">
+    <Grid Background="{StaticResource BackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Filter Section -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+            <TextBox Text="{Binding FilterUser, UpdateSourceTrigger=PropertyChanged}"
+                     Width="200" Margin="0,0,10,0"/>
+            <Button Content="Filter" Command="{Binding FilterCommand}"/>
+        </StackPanel>
+
+        <!-- Add Ticket -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20" VerticalAlignment="Top">
+            <TextBox Text="{Binding NewTitle}" Width="200" Margin="0,0,10,0"/>
+            <TextBox Text="{Binding NewDescription}" Width="250" Margin="0,0,10,0"/>
+            <ComboBox Width="120" SelectedItem="{Binding NewStatus}">
+                <ComboBoxItem Content="Open"/>
+                <ComboBoxItem Content="In Progress"/>
+                <ComboBoxItem Content="Resolved"/>
+            </ComboBox>
+            <Button Content="Add" Command="{Binding AddTicketCommand}" Margin="10,0,0,0"/>
+        </StackPanel>
+
+        <!-- Ticket List -->
+        <DataGrid Grid.Row="2" ItemsSource="{Binding Tickets}" 
+                  SelectedItem="{Binding SelectedTicket}" 
+                  AutoGenerateColumns="False" IsReadOnly="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="150"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="250"/>
+                <DataGridTextColumn Header="User" Binding="{Binding CreatedBy}" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="120"/>
+                <DataGridTextColumn Header="Created" Binding="{Binding CreatedAt}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Action Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,0,0">
+            <Button Content="Update" Command="{Binding UpdateTicketCommand}" Width="100" Margin="10"/>
+            <Button Content="Delete" Command="{Binding DeleteTicketCommand}" Width="100" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Page>
