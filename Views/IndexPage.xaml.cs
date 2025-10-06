@@ -1,14 +1,14 @@
 using System.Windows.Controls;
-using TicketManagementSystem.ViewModels;
+using TicketManagementSystem.Core;
 
-namespace TicketManagementSystem.Views;
-
-public partial class IndexPage : Page
+namespace TicketManagementSystem.Views
 {
-    public IndexPage()
+    public partial class IndexPage : Page
     {
-        InitializeComponent();
-        DataContext = new IndexViewModel();
-        TicketManagementSystem.Core.PageTransitions.FadeIn(this);
+        public IndexPage()
+        {
+            InitializeComponent();
+            TicketManagementSystem.Core.PageTransitions.FadeIn(this); // optional fade-in animation
+        }
     }
 }

@@ -9,10 +9,10 @@
 *.vscode/
 
 # Build results
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Tt]emp/
+bin/
+obj/
+log/
+temp/
 *.cache
 *.pdb
 *.ilk
@@ -36,7 +36,7 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]uild[Ll]og.*
-
+*.db
 # NuGet Packages
 *.nupkg
 **/packages/*

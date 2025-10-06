@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET9_0;NETCOREAPP
 E:\work\UK-SeanChen\TicketManagementSystem\App.xaml
-12-1966911634
+15-705426942
 
-33-13083505
+35-1913058728
 2341018690811
-MainWindow.xaml;Resources\DarkTheme.xaml;Resources\LightTheme.xaml;Resources\Styles.xaml;Views\AdminDashboardPage.xaml;Views\ChartPage.xaml;Views\IndexPage.xaml;Views\LayoutPage.xaml;Views\LoginPage.xaml;Views\ProfilePage.xaml;Views\RegisterPage.xaml;Views\TicketManagementPage.xaml;
+MainWindow.xaml;Resources\DarkTheme.xaml;Resources\Effect.xaml;Resources\LightTheme.xaml;Resources\Styles.xaml;Views\AdminDashboardPage.xaml;Views\ChartPage.xaml;Views\IndexPage.xaml;Views\LayoutPage.xaml;Views\LoginPage.xaml;Views\ProfilePage.xaml;Views\RegisterPage.xaml;Views\Shared\Footer.xaml;Views\Shared\Header.xaml;Views\TicketManagementPage.xaml;
 
 False
 

@@ -1,34 +1,57 @@
-<Page x:Class="TicketManagementSystem.Views.IndexPage"
+﻿<Page x:Class="TicketManagementSystem.Views.IndexPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:vm="clr-namespace:TicketManagementSystem.ViewModels"
+      xmlns:shared="clr-namespace:TicketManagementSystem.Views.Shared"
       Title="Home">
 
-	<Grid Background="{StaticResource BackgroundBrush}">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="3*"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
+    <Page.DataContext>
+        <vm:IndexViewModel/>
+    </Page.DataContext>
 
-		<!-- Carousel -->
-		<ItemsControl ItemsSource="{Binding CarouselImages}" Grid.Row="0" HorizontalAlignment="Center">
-			<ItemsControl.ItemsPanel>
-				<ItemsPanelTemplate>
-					<StackPanel Orientation="Horizontal"/>
-				</ItemsPanelTemplate>
-			</ItemsControl.ItemsPanel>
-			<ItemsControl.ItemTemplate>
-				<DataTemplate>
-					<Border CornerRadius="10" Margin="10" BorderBrush="#DDD" BorderThickness="1">
-						<Image Source="{Binding}" Width="400" Height="200"/>
-					</Border>
-				</DataTemplate>
-			</ItemsControl.ItemTemplate>
-		</ItemsControl>
+    <DockPanel Background="{StaticResource BackgroundBrush}">
 
-		<!-- Buttons -->
-		<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
-			<Button Content="Login" Command="{Binding NavigateLoginCommand}"/>
-			<Button Content="Register" Command="{Binding NavigateRegisterCommand}"/>
-		</StackPanel>
-	</Grid>
+        <!-- Header -->
+        <shared:Header DockPanel.Dock="Top"/>
+
+        <!-- Footer -->
+        <shared:Footer DockPanel.Dock="Bottom"/>
+
+        <!-- Carousel -->
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,40">
+            <Border Width="600"
+                    Height="300"
+                    BorderBrush="#DDD"
+                    BorderThickness="1"
+                    Background="{StaticResource CardBrush}"
+                    Effect="{DynamicResource DropShadowEffect}">
+                <Image x:Name="CarouselImage"
+                   Source="{Binding CurrentImage, NotifyOnTargetUpdated=True}"
+                   Stretch="UniformToFill"
+                   RenderTransformOrigin="0.5,0.5"
+                   Opacity="0">
+                    <Image.Triggers>
+                        <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <!-- Fade -->
+                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                     From="0" To="1"
+                                     Duration="0:0:1"/>
+
+                                    <!-- Slide -->
+                                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                                     From="50" To="0"
+                                     Duration="0:0:1"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Image.Triggers>
+                    <Image.RenderTransform>
+                        <TranslateTransform X="0"/>
+                    </Image.RenderTransform>
+                </Image>
+            </Border>
+        </Grid>
+    </DockPanel>
 </Page>

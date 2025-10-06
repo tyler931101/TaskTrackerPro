@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Views"
+    "\\Models",
+    "\\ViewModels",
+    "\\Views",
+    "\\Views\\Shared"
   ],
   "SelectedNode": "\\TicketManagementSystem.sln",
   "PreviewInSolutionExplorer": false
