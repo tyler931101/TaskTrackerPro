@@ -1,55 +1,13 @@
-﻿<Page x:Class="TicketManagementSystem.Views.AdminDashboardPage"
+<Page x:Class="TicketManagementSystem.Views.AdminDashboardPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:oxy="http://oxyplot.org/wpf"
       Title="Admin Dashboard">
-
-    <Grid Background="{StaticResource BackgroundBrush}" Margin="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-
-        <TextBlock Text="📊 Admin Dashboard"
-               FontSize="28" FontWeight="Bold"
-               Foreground="{StaticResource TextBrush}" Margin="0,0,0,20"/>
-
-        <!-- Stats Cards -->
-        <UniformGrid Grid.Row="1" Rows="1" Columns="4" Margin="0,0,0,30" HorizontalAlignment="Stretch">
-            <!-- Card definitions here -->
-        </UniformGrid>
-
-        <!-- Main Content -->
-        <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <!-- Left: Chart -->
-            <oxy:PlotView Grid.Column="0"
-                  Model="{Binding TicketsPieChartModel}"
-                  Margin="0,0,20,0" />
-
-            <!-- Right: Recent Tickets -->
-            <DataGrid Grid.Column="1" Margin="20,0,0,0"
-              ItemsSource="{Binding RecentTickets}"
-              AutoGenerateColumns="False"
-              IsReadOnly="True"
-              HeadersVisibility="Column"
-              RowBackground="{StaticResource CardBrush}"
-              AlternatingRowBackground="{x:Null}"
-              BorderThickness="0"
-              GridLinesVisibility="None">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40"/>
-                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="150"/>
-                    <DataGridTextColumn Header="User" Binding="{Binding CreatedBy}" Width="100"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
-                    <DataGridTextColumn Header="Created At" Binding="{Binding CreatedAt}" Width="150"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Grid>
+    <Grid Background="White">
+        <StackPanel>
+            <TextBlock Text="Admin Dashboard" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+            <TextBlock Text="This is the Admin Dashboard placeholder."
+                       FontSize="16"
+                       Foreground="Gray"/>
+        </StackPanel>
     </Grid>
 </Page>

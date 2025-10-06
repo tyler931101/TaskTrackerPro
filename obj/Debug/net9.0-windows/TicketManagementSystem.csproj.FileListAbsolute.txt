@@ -71,6 +71,7 @@ E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Resources\Li
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Resources\Styles.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\AdminDashboardPage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\ChartPage.baml
+E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\LayoutPage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\ProfilePage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\Footer.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\Header.baml
@@ -93,7 +94,6 @@ E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\TicketManage
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\App.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\MainWindow.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\IndexPage.baml
-E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\LayoutPage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\LoginPage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\RegisterPage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\TicketManagementSystem.g.resources

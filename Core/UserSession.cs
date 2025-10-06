@@ -1,18 +1,19 @@
 using TicketManagementSystem.Models;
 
-namespace TicketManagementSystem.Core;
-
-public static class UserSession
+namespace TicketManagementSystem.Core
 {
-    public static User? CurrentUser { get; private set; }
-
-    public static void SetUser(User user)
+    public static class UserSession
     {
-        CurrentUser = user;
-    }
+        public static User? CurrentUser { get; private set; }
 
-    public static void Clear()
-    {
-        CurrentUser = null;
+        public static void SetUser(User user)
+        {
+            CurrentUser = user;
+        }
+
+        public static void Logout()
+        {
+            CurrentUser = null;
+        }
     }
 }

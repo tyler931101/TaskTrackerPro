@@ -13,7 +13,6 @@ namespace TicketManagementSystem.ViewModels
 
         private readonly AuthenticationService _auth = new();
 
-        // ✅ LOGIN COMMAND
         [RelayCommand]
         private void Login()
         {
@@ -32,15 +31,11 @@ namespace TicketManagementSystem.ViewModels
             }
         }
 
-        // ✅ BACK COMMAND — e.g., return to IndexPage
         [RelayCommand]
         private void Back() => NavigationService.GoBack();
 
-        // ✅ NEW: NAVIGATE TO REGISTER PAGE
         [RelayCommand]
-        private void NavigateToRegister()
-        {
+        private void NavigateToRegister() =>
             NavigationService.Navigate(new TicketManagementSystem.Views.RegisterPage());
-        }
     }
 }

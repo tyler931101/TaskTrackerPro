@@ -17,8 +17,14 @@ public class Ticket
     [Required]
     public string Status { get; set; } = "Open";
 
+    public int? AssignedUserId { get; set; }
+
+    [ForeignKey(nameof(AssignedUserId))]
+    public User? AssignedUser { get; set; }
+
     [Required]
     public string CreatedBy { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime UpdatedAt { get; set; } = DateTime.Now;
 }
