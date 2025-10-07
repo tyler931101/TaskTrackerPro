@@ -9,71 +9,96 @@ using System.Linq;
 using TicketManagementSystem.Models;
 using TicketManagementSystem.Services;
 
-namespace TicketManagementSystem.ViewModels;
-
-public partial class ChartViewModel : ObservableObject
+namespace TicketManagementSystem.ViewModels
 {
-    private readonly TicketService _ticketService = new();
-
-    [ObservableProperty]
-    private string filterUser = string.Empty;
-
-    [ObservableProperty]
-    private PlotModel _ticketsChartModel = new();
-
-    public ChartViewModel()
+    public partial class ChartViewModel : ObservableObject
     {
-        LoadChart();
-    }
+        private readonly TicketService _ticketService = new();
+        private readonly UserService _userService = new();
 
-    [RelayCommand]
-    private void Filter()
-    {
-        LoadChart(FilterUser);
-    }
+        [ObservableProperty]
+        private string filterUser = string.Empty;
 
-    private void LoadChart(string? username = null)
-    {
-        IEnumerable<Ticket> tickets = string.IsNullOrWhiteSpace(username)
-            ? _ticketService.GetAll()
-            : _ticketService.GetByUser(username);
+        [ObservableProperty]
+        private PlotModel ticketsChartModel = new();
 
-        var grouped = tickets
-            .GroupBy(t => t.Status)
-            .Select(g => new { Status = g.Key, Count = g.Count() })
-            .ToList();
+        [ObservableProperty]
+        private ObservableCollection<User> users = new();
 
-        // Create chart
-        var model = new PlotModel { Title = "Tickets by Status" };
+        [ObservableProperty]
+        private User? selectedUser;
 
-        // Add axes
-        model.Axes.Add(new CategoryAxis
+        public ChartViewModel()
         {
-            Position = AxisPosition.Bottom,
-            ItemsSource = grouped,
-            LabelField = "Status",
-            Title = "Status"
-        });
+            LoadUsers();
+            LoadChart();
+        }
 
-        model.Axes.Add(new LinearAxis
+        private void LoadUsers()
         {
-            Position = AxisPosition.Left,
-            Title = "Count",
-            MinimumPadding = 0,
-            AbsoluteMinimum = 0
-        });
+            var allUsers = _userService.GetAll().ToList();
 
-        // Add bar series
-        var columnSeries = new ColumnSeries
+            // Add "All Users" placeholder
+            allUsers.Insert(0, new User { Id = 0, Username = "All Users" });
+            Users = new ObservableCollection<User>(allUsers);
+        }
+
+        [RelayCommand]
+        private void Filter()
         {
-            Title = "Tickets",
-            ItemsSource = grouped,
-            ValueField = "Count",
-            FillColor = OxyColors.CornflowerBlue
-        };
+            string username = string.Empty;
 
-        model.Series.Add(columnSeries);
+            if (SelectedUser != null && SelectedUser.Username != "All Users")
+                username = SelectedUser.Username;
+            else if (!string.IsNullOrWhiteSpace(FilterUser))
+                username = FilterUser;
 
-        TicketsChartModel = model;
+            LoadChart(username);
+        }
+
+        // Auto-refresh on typing or selection
+        partial void OnFilterUserChanged(string value) => Filter();
+        partial void OnSelectedUserChanged(User? value) => Filter();
+
+        private void LoadChart(string? username = null)
+        {
+            IEnumerable<Ticket> tickets = string.IsNullOrWhiteSpace(username)
+                ? _ticketService.GetAll()
+                : _ticketService.GetByUser(username);
+
+            var grouped = tickets
+                .GroupBy(t => t.Status)
+                .Select(g => new { Status = g.Key, Count = g.Count() })
+                .ToList();
+
+            var model = new PlotModel { Title = "Tickets by Status" };
+
+            model.Axes.Add(new CategoryAxis
+            {
+                Position = AxisPosition.Bottom,
+                ItemsSource = grouped,
+                LabelField = "Status",
+                Title = "Status"
+            });
+
+            model.Axes.Add(new LinearAxis
+            {
+                Position = AxisPosition.Left,
+                Title = "Count",
+                MinimumPadding = 0,
+                AbsoluteMinimum = 0
+            });
+
+            var columnSeries = new ColumnSeries
+            {
+                Title = "Tickets",
+                ItemsSource = grouped,
+                ValueField = "Count",
+                FillColor = OxyColors.CornflowerBlue
+            };
+
+            model.Series.Add(columnSeries);
+            TicketsChartModel = model;
+        }
     }
 }

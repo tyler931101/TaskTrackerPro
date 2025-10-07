@@ -1,8 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Data"
+    "\\Core",
+    "\\Data",
+    "\\Helpers",
+    "\\Models",
+    "\\Resources",
+    "\\Services",
+    "\\ViewModels",
+    "\\Views",
+    "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Data\\AppDbContext.cs",
+  "SelectedNode": "\\ViewModels\\TicketManagementViewModel.cs",
   "PreviewInSolutionExplorer": false
 }

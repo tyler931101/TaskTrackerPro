@@ -1,51 +1,166 @@
-<Page x:Class="TicketManagementSystem.Views.TicketManagementPage"
+﻿<Page x:Class="TicketManagementSystem.Views.TicketManagementPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="Ticket Management">
+
     <Grid Background="{StaticResource BackgroundBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Filter Section -->
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
-            <TextBox Text="{Binding FilterUser, UpdateSourceTrigger=PropertyChanged}"
-                     Width="200" Margin="0,0,10,0"/>
-            <Button Content="Filter" Command="{Binding FilterCommand}"/>
-        </StackPanel>
+        <!-- 🔹 Top Bar -->
+        <DockPanel Grid.Row="0" Margin="10">
+            <!-- 🔹 Filter section -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                <TextBlock Text="Filter by User:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <ComboBox Width="200"
+                          Height="30"
+                          ItemsSource="{Binding Users}"
+                          SelectedItem="{Binding SelectedUser}"
+                          DisplayMemberPath="Username"
+                          Margin="0,0,0,0"/>
+            </StackPanel>
 
-        <!-- Add Ticket -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,20" VerticalAlignment="Top">
-            <TextBox Text="{Binding NewTitle}" Width="200" Margin="0,0,10,0"/>
-            <TextBox Text="{Binding NewDescription}" Width="250" Margin="0,0,10,0"/>
-            <ComboBox Width="120" SelectedItem="{Binding NewStatus}">
-                <ComboBoxItem Content="Open"/>
-                <ComboBoxItem Content="In Progress"/>
-                <ComboBoxItem Content="Resolved"/>
-            </ComboBox>
-            <Button Content="Add" Command="{Binding AddTicketCommand}" Margin="10,0,0,0"/>
-        </StackPanel>
+            <!-- 🔹 Add Ticket (Admins only) -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <Button Content="➕ Add Ticket"
+                        Background="{StaticResource PrimaryBrush}"
+                        Foreground="White"
+                        BorderThickness="0"
+                        Height="30"
+                        Width="120"
+                        FontSize="15"
+                        Margin="5,5,5,5"
+                        Command="{Binding AddTicketCommand}"
+                        Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </DockPanel>
 
-        <!-- Ticket List -->
-        <DataGrid Grid.Row="2" ItemsSource="{Binding Tickets}" 
-                  SelectedItem="{Binding SelectedTicket}" 
-                  AutoGenerateColumns="False" IsReadOnly="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="150"/>
-                <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="250"/>
-                <DataGridTextColumn Header="User" Binding="{Binding CreatedBy}" Width="120" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="120"/>
-                <DataGridTextColumn Header="Created" Binding="{Binding CreatedAt}" Width="150"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <!-- 🔹 Kanban Board -->
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Disabled"
+                      Margin="10">
+            <ItemsControl ItemsSource="{Binding StatusGroups}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
 
-        <!-- Action Buttons -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,10,0,0">
-            <Button Content="Update" Command="{Binding UpdateTicketCommand}" Width="100" Margin="10"/>
-            <Button Content="Delete" Command="{Binding DeleteTicketCommand}" Width="100" Margin="10"/>
-        </StackPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <!-- 🔸 Status Column -->
+                        <Border Background="{StaticResource CardBrush}"
+                                CornerRadius="10"
+                                Margin="10"
+                                Padding="10"
+                                Width="260"
+                                AllowDrop="True"
+                                Tag="{Binding Status}"
+                                DragOver="StatusColumn_DragOver"
+                                Drop="StatusColumn_Drop">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Status}"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center"
+                                           Margin="0,0,0,10"/>
+
+                                <!-- 🔹 Ticket List -->
+                                <ItemsControl ItemsSource="{Binding Tickets}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <!-- 🔸 Single Ticket Card -->
+                                            <Border BorderBrush="#ccc"
+                                                    BorderThickness="1"
+                                                    CornerRadius="6"
+                                                    Padding="8"
+                                                    Margin="0,0,0,6"
+                                                    Background="{StaticResource BackgroundBrush}"
+                                                    MouseMove="Ticket_MouseMove">
+                                                <StackPanel>
+                                                    <!-- Title & Description -->
+                                                    <TextBlock Text="{Binding Title}"
+                                                               FontWeight="Bold"
+                                                               FontSize="14"/>
+                                                    <TextBlock Text="{Binding Description}"
+                                                               TextWrapping="Wrap"
+                                                               FontSize="13"
+                                                               Margin="0,2,0,4"/>
+                                                    <TextBlock Text="{Binding DueDate, StringFormat='Due: {0:yyyy-MM-dd}'}"
+                                                               FontSize="11"
+                                                               Foreground="Gray"
+                                                               Margin="0,0,0,4"/>
+
+                                                    <!-- 🧩 Avatar & Username -->
+                                                    <StackPanel Orientation="Horizontal"
+                                                        VerticalAlignment="Center">
+                                                        <Ellipse Width="24"
+                                                             Height="24"
+                                                             Margin="0,0,5,0"
+                                                             Stroke="#CCCCCC"
+                                                             StrokeThickness="1">
+                                                            <Ellipse.Fill>
+                                                                <ImageBrush ImageSource="{Binding AssignedUser.AvatarPath, TargetNullValue='/Assets/default-avatar.png'}"
+                                                                            Stretch="UniformToFill"/>
+                                                            </Ellipse.Fill>
+                                                        </Ellipse>
+
+                                                        <TextBlock Text="{Binding AssignedUser.Username}"
+                                                                   FontSize="12"
+                                                                   Foreground="LightGray"
+                                                                   VerticalAlignment="Center"/>
+                                                    </StackPanel>
+
+                                                    <!-- 🧱 Admin: Edit/Delete Buttons -->
+                                                    <StackPanel Orientation="Horizontal"
+                                                                HorizontalAlignment="Right"
+                                                                Margin="0,5,0,0"
+                                                                Visibility="{Binding DataContext.IsAdmin,
+                                                                RelativeSource={RelativeSource AncestorType=Page},
+                                                                Converter={StaticResource BoolToVisibilityConverter}}">
+                                                        <Button Content="✏️"
+                                                                ToolTip="Edit"
+                                                                Width="25"
+                                                                Height="25"
+                                                                FontSize="14"
+                                                                Background="Transparent"
+                                                                BorderThickness="0"
+                                                                Command="{Binding DataContext.EditTicketCommand,
+                                                                            RelativeSource={RelativeSource AncestorType=Page}}"
+                                                                CommandParameter="{Binding}"/>
+                                                        <Button Content="🗑️"
+                                                                ToolTip="Delete"
+                                                                Width="25"
+                                                                Height="25"
+                                                                FontSize="14"
+                                                                Background="Transparent"
+                                                                BorderThickness="0"
+                                                                Margin="5,0,0,0"
+                                                                Command="{Binding DataContext.DeleteTicketCommand,
+                                                                            RelativeSource={RelativeSource AncestorType=Page}}"
+                                                                CommandParameter="{Binding}"/>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Page>

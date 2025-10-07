@@ -11,12 +11,18 @@
         </Grid.RowDefinitions>
 
         <!-- Filter -->
-        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,20">
-            <TextBox Text="{Binding FilterUser, UpdateSourceTrigger=PropertyChanged}"
-                     md:HintAssist.Hint="Search tickets..."
-                     Width="200" Margin="0,0,10,0"/>
-            <Button Content="Filter" Command="{Binding FilterCommand}" Width="100"/>
-        </StackPanel>
+		<DockPanel Grid.Row="0" Margin="10">
+			<!-- 🔹 Filter section -->
+			<StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+				<TextBlock Text="Filter by User:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+				<ComboBox Width="200"
+                          Height="30"
+                          ItemsSource="{Binding Users}"
+                          SelectedItem="{Binding SelectedUser}"
+                          DisplayMemberPath="Username"
+                          Margin="0,0,0,0"/>
+			</StackPanel>
+		</DockPanel>
 
         <!-- Chart -->
         <oxy:PlotView Grid.Row="1"

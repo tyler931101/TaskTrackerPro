@@ -15,7 +15,6 @@
 
 		<Grid VerticalAlignment="Center" HorizontalAlignment="Center">
 			<Border Background="{StaticResource CardBrush}"
-                    CornerRadius="12"
                     Padding="40"
                     Effect="{StaticResource DropShadowEffect}">
 				<StackPanel Width="320" VerticalAlignment="Center">

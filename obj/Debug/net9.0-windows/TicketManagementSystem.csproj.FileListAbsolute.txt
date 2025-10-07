@@ -75,6 +75,7 @@ E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Layout
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\ProfilePage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\Footer.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\Header.baml
+E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\TicketDialog.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\TicketManagementPage.baml
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\MainWindow.g.cs
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\AdminDashboardPage.g.cs
@@ -86,6 +87,7 @@ E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Profil
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\RegisterPage.g.cs
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\Footer.g.cs
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\Header.g.cs
+E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\Shared\TicketDialog.g.cs
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\Views\TicketManagementPage.g.cs
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\App.g.cs
 E:\work\UK-SeanChen\TicketManagementSystem\obj\Debug\net9.0-windows\GeneratedInternalTypeHelper.g.cs

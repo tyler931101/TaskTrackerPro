@@ -20,7 +20,6 @@
         <!-- Register Form -->
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
             <Border Background="{StaticResource CardBrush}"
-                    CornerRadius="10"
                     Padding="40"
                     Effect="{StaticResource DropShadowEffect}">
                 <StackPanel Width="300" VerticalAlignment="Center">

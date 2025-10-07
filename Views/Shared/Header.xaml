@@ -22,7 +22,6 @@
                     Margin="10,0"/> -->
         </StackPanel>
 
-        <!-- Right: Navigation -->
         <!-- Right: Buttons -->
         <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Center" Margin="0,0,20,0">
             <Button Content="Login"  Click="Login_Click" Command="{Binding NavigateToLoginCommand}"

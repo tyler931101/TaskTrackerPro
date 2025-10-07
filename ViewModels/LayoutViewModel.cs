@@ -1,4 +1,4 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Windows.Controls;
 using TicketManagementSystem.Core;
@@ -18,6 +18,12 @@ namespace TicketManagementSystem.ViewModels
         [ObservableProperty]
         private string _currentRole = string.Empty;
 
+        [ObservableProperty]
+        private string _avatarPath = "/Assets/default-avatar.png";
+
+        [ObservableProperty]
+        private string _fullName = string.Empty;
+
         public LayoutViewModel(Frame frame)
         {
             _frame = frame;
@@ -30,9 +36,26 @@ namespace TicketManagementSystem.ViewModels
                 IsAdmin = user.Role == "Admin";
                 CurrentUsername = user.Username;
                 CurrentRole = user.Role;
+                AvatarPath = string.IsNullOrEmpty(user.AvatarPath) ? "/Assets/default-avatar.png" : user.AvatarPath;
+                FullName = user.FullName;
             }
 
+            // 🔹 Subscribe to profile updates
+            UserSession.ProfileUpdated += OnProfileUpdated;
+
             NotificationManager.Show($"Welcome, {CurrentUsername} ({CurrentRole})", "Info");
+        }
+
+        private void OnProfileUpdated()
+        {
+            var user = UserSession.CurrentUser;
+            if (user == null) return;
+
+            AvatarPath = string.IsNullOrEmpty(user.AvatarPath)
+                ? "/Assets/default-avatar.png"
+                : user.AvatarPath;
+            CurrentUsername = user.Username;
+            FullName = user.FullName;
         }
 
         [RelayCommand]

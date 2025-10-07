@@ -1,121 +1,162 @@
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using System.Linq;
 using TicketManagementSystem.Models;
-using TicketManagementSystem.Services;
-using System.Windows;
+using TicketManagementSystem.Data;
+using TicketManagementSystem.Views.Shared;
 using TicketManagementSystem.Core;
+using System.Windows;
+using Microsoft.EntityFrameworkCore;
 
-namespace TicketManagementSystem.ViewModels;
-
-public partial class TicketManagementViewModel : ObservableObject
+namespace TicketManagementSystem.ViewModels
 {
-    private readonly TicketService _ticketService = new();
-
-    [ObservableProperty]
-    private ObservableCollection<Ticket> _tickets = new();
-
-    [ObservableProperty]
-    private string _filterUser = string.Empty;
-
-    [ObservableProperty]
-    private Ticket _selectedTicket = new();
-
-    [ObservableProperty]
-    private string _newTitle = string.Empty;
-
-    [ObservableProperty]
-    private string _newDescription = string.Empty;
-
-    [ObservableProperty]
-    private string _newStatus = "Open";
-
-    public TicketManagementViewModel()
+    public partial class TicketManagementViewModel : ObservableObject
     {
-        LoadTickets();
-    }
+        public ObservableCollection<TicketGroup> StatusGroups { get; set; } = new();
+        public ObservableCollection<User> Users { get; set; } = new();
 
-    private void LoadTickets(string? username = null)
-    {
-        var currentUser = UserSession.CurrentUser;
-        if (currentUser == null) return;
+        [ObservableProperty] private string filterUser = string.Empty;
+        [ObservableProperty] private User? selectedUser;
+        [ObservableProperty] private bool isAdmin;
 
-        if (currentUser.Role == "Admin")
+        public TicketManagementViewModel()
         {
-            var list = _ticketService.GetAll();
-            Tickets = new ObservableCollection<Ticket>(list);
-        }
-        else
-        {
-            var list = _ticketService.GetByUser(currentUser.Username);
-            Tickets = new ObservableCollection<Ticket>(list);
-        }
-    }
+            var user = UserSession.CurrentUser;
+            IsAdmin = user != null && user.Role == "Admin";
 
-    [RelayCommand]
-    private void Filter()
-    {
-        LoadTickets(FilterUser);
-    }
-
-    [RelayCommand]
-    private void AddTicket()
-    {
-        if (string.IsNullOrWhiteSpace(NewTitle))
-        {
-            NotificationManager.Show("Please enter a title.", "Warning");
-            MessageBox.Show("Please enter a title.", "Validation Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-            return;
+            LoadUsers();
+            LoadTickets();
         }
 
-        var newTicket = new Ticket
+        private void LoadUsers()
         {
-            Title = NewTitle,
-            Description = NewDescription,
-            CreatedBy = string.IsNullOrWhiteSpace(FilterUser) ? "guest" : FilterUser,
-            Status = NewStatus
-        };
+            using var db = new AppDbContext();
+            Users.Clear();
 
-        _ticketService.Add(newTicket);
-        NotificationManager.Show("Ticket added successfully!", "Success");
-        LoadTickets(FilterUser);
+            // Add "All Users" placeholder
+            Users.Add(new User { Id = 0, Username = "All Users" });
 
-        NewTitle = string.Empty;
-        NewDescription = string.Empty;
-        NewStatus = "Open";
-    }
-
-    [RelayCommand]
-    private void UpdateTicket()
-    {
-        if (SelectedTicket == null) return;
-        _ticketService.Update(SelectedTicket);
-        NotificationManager.Show("Ticket updated.", "Success");
-        LoadTickets(FilterUser);
-    }
-
-    [RelayCommand]
-    private void DeleteTicket()
-    {
-        var user = UserSession.CurrentUser;
-        if (user == null) return;
-
-        if (user.Role != "Admin")
-        {
-            MessageBox.Show("Only admins can delete tickets.", "Permission Denied",
-                            MessageBoxButton.OK, MessageBoxImage.Error);
-            NotificationManager.Show("Only admins can delete tickets.", "Error");
-            return;
+            foreach (var user in db.Users.OrderBy(u => u.Username))
+                Users.Add(user);
         }
 
-        if (SelectedTicket == null) return;
-
-        if (MessageBox.Show("Delete this ticket?", "Confirm",
-            MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+        private void LoadTickets()
         {
-            _ticketService.Delete(SelectedTicket.Id);
-            NotificationManager.Show("Ticket deleted.", "Success");
-            LoadTickets(FilterUser);
+            using var db = new AppDbContext();
+            var tickets = db.Tickets
+                .Include(t => t.AssignedUser)
+                .ToList();
+
+            // 🧩 Filter by selected user or text
+            if (SelectedUser != null && SelectedUser.Username != "All Users")
+                tickets = tickets.Where(t => t.AssignedUserId == SelectedUser.Id).ToList();
+            else if (!string.IsNullOrWhiteSpace(FilterUser))
+                tickets = tickets
+                    .Where(t => t.AssignedUser != null &&
+                                t.AssignedUser.Username.ToLower().Contains(FilterUser.ToLower()))
+                    .ToList();
+
+            var statuses = new[] { "To Do", "Progress", "Review", "Done", "Closed" };
+            StatusGroups.Clear();
+
+            foreach (var status in statuses)
+            {
+                var group = new TicketGroup(status,
+                    new ObservableCollection<Ticket>(tickets.Where(t => t.Status == status)));
+                StatusGroups.Add(group);
+            }
+        }
+
+        [RelayCommand]
+        private void Filter() => LoadTickets();
+
+        // Auto-refresh on typing or selection
+        partial void OnFilterUserChanged(string value) => LoadTickets();
+        partial void OnSelectedUserChanged(User? value) => LoadTickets();
+
+        [RelayCommand]
+        private void AddTicket()
+        {
+            var currentUser = UserSession.CurrentUser;
+            if (currentUser == null || currentUser.Role != "Admin")
+            {
+                NotificationManager.Show("Only administrators can create tickets.", "Access Denied");
+                return;
+            }
+
+            var dialog = new TicketDialog();
+            if (dialog.ShowDialog() == true && dialog.CreatedOrUpdatedTicket != null)
+            {
+                using var db = new AppDbContext();
+                db.Tickets.Add(dialog.CreatedOrUpdatedTicket);
+                db.SaveChanges();
+                LoadTickets();
+
+                NotificationManager.Show("Ticket created successfully!", "Success");
+            }
+        }
+
+        [RelayCommand]
+        private void EditTicket(Ticket ticket)
+        {
+            var dialog = new TicketDialog(ticket);
+            if (dialog.ShowDialog() == true && dialog.CreatedOrUpdatedTicket != null)
+            {
+                using var db = new AppDbContext();
+                db.Tickets.Update(dialog.CreatedOrUpdatedTicket);
+                db.SaveChanges();
+                LoadTickets();
+
+                NotificationManager.Show("Ticket updated successfully!", "Success");
+            }
+        }
+
+        [RelayCommand]
+        private void DeleteTicket(Ticket ticket)
+        {
+            if (MessageBox.Show("Are you sure you want to delete this ticket?",
+                                "Confirm Delete",
+                                MessageBoxButton.YesNo,
+                                MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                using var db = new AppDbContext();
+                var existing = db.Tickets.Find(ticket.Id);
+                if (existing != null)
+                {
+                    db.Tickets.Remove(existing);
+                    db.SaveChanges();
+                    LoadTickets();
+                    NotificationManager.Show("Ticket deleted.", "Deleted");
+                }
+            }
+        }
+
+        // ✅ Clean, minimal notification behavior when moving tickets
+        public void MoveTicket(Ticket ticket, string newStatus)
+        {
+            using var db = new AppDbContext();
+            var dbTicket = db.Tickets.FirstOrDefault(t => t.Id == ticket.Id);
+            if (dbTicket == null) return;
+
+            dbTicket.Status = newStatus;
+            dbTicket.UpdatedAt = System.DateTime.Now;
+            db.SaveChanges();
+
+            LoadTickets();
+            NotificationManager.Show($"Moved '{ticket.Title}' to '{newStatus}'.", "Updated");
+        }
+    }
+
+    public class TicketGroup
+    {
+        public string Status { get; set; }
+        public ObservableCollection<Ticket> Tickets { get; set; }
+
+        public TicketGroup(string status, ObservableCollection<Ticket> tickets)
+        {
+            Status = status;
+            Tickets = tickets;
         }
     }
 }
