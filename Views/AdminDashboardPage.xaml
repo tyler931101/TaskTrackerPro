@@ -1,13 +1,177 @@
 <Page x:Class="TicketManagementSystem.Views.AdminDashboardPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:vm="clr-namespace:TicketManagementSystem.ViewModels"
       Title="Admin Dashboard">
-    <Grid Background="White">
-        <StackPanel>
-            <TextBlock Text="Admin Dashboard" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
-            <TextBlock Text="This is the Admin Dashboard placeholder."
-                       FontSize="16"
-                       Foreground="Gray"/>
-        </StackPanel>
-    </Grid>
+
+	<Page.DataContext>
+		<vm:AdminDashboardViewModel/>
+	</Page.DataContext>
+
+	<Grid Background="White" Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<TextBlock Text="All Registered Users"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="0,0,0,10"/>
+
+		<DataGrid ItemsSource="{Binding Users}"
+                  AutoGenerateColumns="False"
+                  Grid.Row="1"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="None"
+                  RowHeight="50">
+
+			<DataGrid.Columns>
+
+				<!-- 🧩 Avatar Column -->
+				<DataGridTemplateColumn Header="Avatar" Width="60">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<Ellipse Width="32"
+									 Height="32"
+									 Stroke="White"
+									 StrokeThickness="1"
+									 Margin="0,0,5,0">
+								<Ellipse.Fill>
+									<ImageBrush ImageSource="{Binding AvatarPath, TargetNullValue='/Assets/default-avatar.png'}"
+												Stretch="UniformToFill"/>
+								</Ellipse.Fill>
+							</Ellipse>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+					<DataGridTemplateColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTemplateColumn.HeaderStyle>
+				
+				</DataGridTemplateColumn>
+
+				<!-- 🧾 Centered Text Columns -->
+				<DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto">
+					<DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+					<DataGridTextColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.HeaderStyle>
+				</DataGridTextColumn>
+
+				<DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="*">
+					<DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+					<DataGridTextColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.HeaderStyle>
+				</DataGridTextColumn>
+
+				<DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*">
+					<DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+					<DataGridTextColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.HeaderStyle>
+				</DataGridTextColumn>
+
+				<DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*">
+					<DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+					<DataGridTextColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.HeaderStyle>
+				</DataGridTextColumn>
+
+				<DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="Auto">
+					<DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+					<DataGridTextColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.HeaderStyle>
+				</DataGridTextColumn>
+
+				<!-- ✅ Allowed Column -->
+				<DataGridTextColumn Header="Allowed" Binding="{Binding IsLoginAllowed}" Width="Auto"  IsReadOnly="True">
+					<DataGridTextColumn.ElementStyle>
+						<Style TargetType="TextBlock">
+							<Setter Property="HorizontalAlignment" Value="Center"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.ElementStyle>
+					<DataGridTextColumn.HeaderStyle>
+						<Style TargetType="DataGridColumnHeader">
+							<Setter Property="HorizontalContentAlignment" Value="Center"/>
+						</Style>
+					</DataGridTextColumn.HeaderStyle>
+				</DataGridTextColumn>
+
+				<!-- ⚙️ Actions Column -->
+				<DataGridTemplateColumn Header="Actions">
+					<DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+								<Button Content="✅"
+                                        ToolTip="Allow"
+                                        Width="25"
+                                        Height="25"
+                                        FontSize="14"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Margin="5,0,0,0"
+                                        Command="{Binding DataContext.AllowLoginCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                        CommandParameter="{Binding}"/>
+
+								<Button Content="🔴"
+                                        ToolTip="Stop"
+                                        Width="25"
+                                        Height="25"
+                                        FontSize="14"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Margin="5,0,0,0"
+                                        Command="{Binding DataContext.StopLoginCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                                        CommandParameter="{Binding}"/>
+							</StackPanel>
+						</DataTemplate>
+					</DataGridTemplateColumn.CellTemplate>
+				</DataGridTemplateColumn>
+
+			</DataGrid.Columns>
+		</DataGrid>
+	</Grid>
 </Page>

@@ -8,9 +8,8 @@
     "\\Resources",
     "\\Services",
     "\\ViewModels",
-    "\\Views",
-    "\\Views\\Shared"
+    "\\Views"
   ],
-  "SelectedNode": "\\ViewModels\\TicketManagementViewModel.cs",
+  "SelectedNode": "\\Views\\AdminDashboardPage.xaml",
   "PreviewInSolutionExplorer": false
 }

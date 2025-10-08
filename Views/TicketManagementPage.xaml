@@ -47,8 +47,10 @@
 
         <!-- 🔹 Kanban Board -->
         <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto"
                       HorizontalScrollBarVisibility="Auto"
-                      VerticalScrollBarVisibility="Disabled"
+                      PanningMode="VerticalOnly"
+                      CanContentScroll="True"
                       Margin="10">
             <ItemsControl ItemsSource="{Binding StatusGroups}">
                 <ItemsControl.ItemsPanel>

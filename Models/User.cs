@@ -19,4 +19,5 @@ public class User
     public string Role { get; set; } = "User"; // Default role
 
     public string? AvatarPath { get; set; }
+    public bool IsLoginAllowed { get; set; } = true;
 }

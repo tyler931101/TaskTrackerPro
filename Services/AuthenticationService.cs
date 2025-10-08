@@ -6,32 +6,58 @@ namespace TicketManagementSystem.Services
 {
     public class AuthenticationService
     {
-        public User? Login(string username, string password)
+        private readonly AppDbContext _db;
+
+        public AuthenticationService()
         {
-            using var db = new AppDbContext();
-            return db.Users.FirstOrDefault(u => u.Username == username && u.Password == password);
+            _db = new AppDbContext();
         }
 
+        /// <summary>
+        /// Checks credentials and returns a User if valid; otherwise null.
+        /// </summary>
+        public User? Login(string username, string password)
+        {
+            // Find user by username
+            var user = _db.Users.FirstOrDefault(u => u.Username == username);
+
+            if (user is null)
+                return null;
+
+            // Verify password
+            if (user.Password != password)
+                return null;
+
+            // Check if login is allowed
+            if (!user.IsLoginAllowed)
+                return user; // Still return so ViewModel can handle message
+
+            // All good — return the authenticated user
+            return user;
+        }
+
+        /// <summary>
+        /// Registers a new user.
+        /// </summary>
         public bool Register(string username, string password, string email)
         {
-            using var db = new AppDbContext();
-
-            if (db.Users.Any(u => u.Username == username))
+            if (_db.Users.Any(u => u.Username == username))
                 return false;
 
-            // 🧠 First registered user becomes Admin
-            bool isFirstUser = !db.Users.Any();
+            bool isFirstUser = !_db.Users.Any();
 
-            db.Users.Add(new User
+            var newUser = new User
             {
                 Username = username,
                 Password = password,
                 Email = email,
                 FullName = username,
-                Role = isFirstUser ? "Admin" : "User"
-            });
+                Role = isFirstUser ? "Admin" : "User",
+                IsLoginAllowed = true
+            };
 
-            db.SaveChanges();
+            _db.Users.Add(newUser);
+            _db.SaveChanges();
             return true;
         }
     }

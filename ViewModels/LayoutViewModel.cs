@@ -43,7 +43,7 @@ namespace TicketManagementSystem.ViewModels
             // 🔹 Subscribe to profile updates
             UserSession.ProfileUpdated += OnProfileUpdated;
 
-            NotificationManager.Show($"Welcome, {CurrentUsername} ({CurrentRole})", "Info");
+            // NotificationManager.Show($"Welcome, {CurrentUsername} ({CurrentRole})", "Info");
         }
 
         private void OnProfileUpdated()

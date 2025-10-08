@@ -17,18 +17,24 @@ namespace TicketManagementSystem.ViewModels
         private void Login()
         {
             var user = _auth.Login(Username, Password);
-            if (user is not null)
+
+            if (user is null)
             {
-                UserSession.SetUser(user);
-                NavigationService.Navigate(new TicketManagementSystem.Views.LayoutPage());
-                NotificationManager.Show($"Welcome back, {user.FullName}!", "Success");
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password.", "Login Failed",
-                                MessageBoxButton.OK, MessageBoxImage.Warning);
+                // Login failed due to either wrong credentials or not allowed
                 NotificationManager.Show("Invalid username or password.", "Error");
+                return;
             }
+
+            if (!user.IsLoginAllowed)
+            {
+                NotificationManager.Show("Login is not allowed, please contact support team", "Success");
+                return;
+            }
+
+            // ✅ User exists and is allowed
+            UserSession.SetUser(user);
+            NavigationService.Navigate(new TicketManagementSystem.Views.LayoutPage());
+            NotificationManager.Show($"Welcome!, {user.FullName}!", "Success");
         }
 
         [RelayCommand]
